@@ -39,7 +39,7 @@ body {
     line-height: 1;
     font-size: 14px;
     background-color: #fafafa;
-    color: rgb(255 255 255);
+    color: rgb(0, 0, 0);
     font-family: Montserrat;
     font-weight: 500;
     min-height: 3000px;
@@ -128,7 +128,7 @@ body {
 .button__text{
     color: aliceblue;
 }
-/* ============================main=============================================== */
+/* =======================================main=============================================== */
 .main-block {
     position: relative;
 }
@@ -151,6 +151,7 @@ body {
     letter-spacing: 0.2px;
     text-align: center;
     margin: 0 0 15px 0;
+    color: #fafafa;
 }
 /* ====================== */
 
@@ -190,11 +191,6 @@ body {
     background: #e4612d;
 }
 
-.main-block__button_border {
-    color: #FFFFFF;
-    background: #e4612d;
-}
-
 /* ================================================ */
 .main-block_image {
     position: absolute;
@@ -207,4 +203,163 @@ body {
 .main-block_image img {
     max-width: 100%;   
 }
-/* ================================================== */
+/* ============================================== */
+.page-null{
+    position: relative;
+    min-height: 400px;
+}
+/* ===========================================services-block====================================== */
+
+.services-block {
+    position: relative;
+}
+/* ==================== */
+.services-block__title {
+    font-size: 48px;
+    line-height: calc(80 / 58 * 100%);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #000000;
+}
+/* =================== */
+.services-block__body{
+    /* border: solid 3px rgb(16, 32, 0); */
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    z-index: 5;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.753), rgba(124, 128, 118, 0.336), rgb(29, 29, 29));
+}
+/* ================== */
+.services-block__card{
+    border: solid 2px rgb(41, 41, 41);
+    border-radius: 15px;
+    padding: 30px;
+    min-height: 400px;
+    width: 289px;
+    z-index: 3;
+    position: relative;
+    box-shadow: 10px 5px 5px rgb(71, 71, 71);
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+.services-block__card:not(:last-of-type){
+    margin-right: 30px;
+}
+/* ================== */
+.services-block__card-title{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    height: 45px;
+    width: 100%;
+    margin: 0 0 0px 0;
+    color: #FFFFFF;
+}
+/* ================== */
+.services-block__card-text{
+    font-weight: 600;
+    padding: 3px;
+    border-radius: 5px;
+    height: 225px;
+    color: #000000;
+    font-size: 16px;
+    box-shadow: inset 20em 20em rgba(179, 179, 179, 0.459);
+}
+/* ================== */
+.services-block__card-price{
+    color: #FFFFFF;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+}
+/* ================== */
+.services-block__card_img-landing {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    height: 415px;
+    z-index: -1;
+    border-radius: 15px;
+    opacity: 0.9;
+    width: 287px;
+}
+/* ================== */
+.services-block__button {
+    border-radius: 37px;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 36px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    margin: 10px 17px;
+    color: #FFFFFF;
+    background: #e4612d;
+    position: relative;
+    top: 15px;
+}
+/* ====================================etaps-block==================== */
+.etaps-block_image {
+    position: relative;
+    height: 100%;
+    top: 0px;
+    z-index: 0;
+}
+.etaps-block_image img {
+    width: 100%;
+    opacity: 0.8;
+}
+/* =================== */
+.etaps-block__title{
+    font-size: 48px;
+    line-height: calc(80 / 58 * 100%);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #1d1c1c;
+    position: relative;
+    top: 120px;
+    z-index: 3;
+}
+/* =================== */
+.etaps-block__container {
+    position: relative;
+}
+/* ==================== */
+.etaps-block__body {
+    position: absolute;
+    z-index: 5;
+    top: 100px;
+}
+/* ==================== */
+.etaps-block__card-title{
+    font-size: 25px;
+}
+.etaps-block__card-text {
+
+}
+/* =================== */
+.etaps-block__card {
+    width: 30%;
+    margin: 1.5%;
+    padding: 20px;
+    border: 5px solid snow;
+    background-color: #ffffffe0;
+}
+.etaps-block__card_2 {
+    position: relative;
+    left: 33%;
+}
+.etaps-block__card_3 {
+    position: relative;
+    left: 66%;
+}
