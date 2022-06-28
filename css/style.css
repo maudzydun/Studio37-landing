@@ -42,7 +42,7 @@ body {
     color: rgb(0, 0, 0);
     font-family: Montserrat;
     font-weight: 500;
-    min-height: 3000px;
+    /* min-height: 3000px; */
 }
 /* ==================== */
 .wrapper {
@@ -362,4 +362,154 @@ body {
 .etaps-block__card_3 {
     position: relative;
     left: 66%;
+}
+/* ===========================page__idea===================================== */
+.page__idea-block {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    /* width: 100%; */
+    border: 4px solid #424242;
+    border-radius: 60px;
+    position: relative;
+    height: 110px;
+}
+.idea-block__container{
+    display: flex;
+}
+/* ===================== */
+.idea-block__title{
+    font-size: 40px;
+    font-weight: 600;
+    color: #030054;
+}
+/* ===================== */
+.idea-block__text {
+    margin-top: 10px;
+    width: 100%;
+}
+/* ===================== */
+.idea-block__href{
+    border-radius: 37px;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 36px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    /* margin: 0px 0px; */
+    color: #FFFFFF;
+    background: #e4612d;
+    position: absolute;
+    left: 65%;
+    top: 25%;
+}
+/* =====================================footer=========================== */
+.footer {
+    min-height: 400px;
+    display: flex;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.473), rgb(242 212 185), rgb(198 124 94));
+}
+/* ================== */
+.footer-card-left, .footer-card-right {
+    width: 50%;
+    height: 300px;
+    max-width: 50%;
+    padding: 40px;
+}
+/* ================== */
+.footer-card-left h1, .footer-card-right h1 {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 25px;
+}
+/* ================== */
+.footer-input_name_phone {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+.footer-input_name_phone input {
+    width: 47%;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 4px solid bisque;
+    color: rgb(19, 15, 11);
+}
+
+.footer-input_name {
+    margin-right: 6%;
+}
+
+.footer-input_email{
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 4px solid bisque;
+    color: rgb(19, 15, 11);
+    margin-bottom: 13px;
+}
+
+.footer-textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 4px solid bisque;
+    color: rgb(19, 15, 11);
+}
+
+.footer-button {
+    border-radius: 20px;
+    /* display: flex; */
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 30px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #f3d5bb;
+    color: #000000;
+}
+
+.footer-button:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.footer_my-telefon, .footer_my-email {
+    /* height: 30px; */
+    line-height: 30px;
+    vertical-align:middle;
+    text-align:center;
+    margin-left: 10px;
+}
+
+.footer-telefon-div, .footer-email-div {
+    /* justify-content: center; */
+    display: flex;
+    height: 30px;
+}
+
+.footer-card-right {
+    position: relative;
+}
+
+.footer_messegers {
+    position: fixed;
+    left: 90%;
+    top: 90%;
+    z-index: 50;
+}
+
+.footer_messegers img {
+    max-height: 50px;
 }
