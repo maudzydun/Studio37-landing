@@ -19,37 +19,19 @@ li {
     list-style: none;
 }
 /* ======================= */
-img {
-    vertical-align: top;
-}
-/* ======================= */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: inherit;
-    font-size: inherit;
-}
-/* ====================== */
 html,
 body {
     height: 100%;
-    line-height: 1;
+    line-height: 1.733333;
     font-size: 14px;
-    background-color: #fafafa;
+    background-color: #dfdfdf;
     color: rgb(0, 0, 0);
     font-family: Montserrat;
     font-weight: 500;
+    overflow-x: hidden;
     /* min-height: 3000px; */
 }
-/* ==================== */
-.wrapper {
-    min-height: 100%;
-    overflow: hidden;
-}
-/* ==================== */
+/* ====================== */
 ._container {
     max-width: 1024px;
     margin: 0 auto;
@@ -57,459 +39,505 @@ body {
     /* мерджин 0 авто выстроит любой блочный блок ровно по средине */
     padding: 0 15px;
     box-sizing: content-box;
+    /* Если ширина 100% то весь контент помещается внутрь, таким образом идет выравниване по контенту */
 }
-
-/*==================================== Шапка ==================================*/
-
-.header {
+/* ==================Шапка================ */
+/* ============HEADER======= */
+header{
     position: fixed;
     width: 100%;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;
     z-index: 50;
 }
-/* ================== */
-.header__container {
+.header{
+    background-color: #5c5c5ca1;
     display: flex;
     flex-direction: row;
-    line-height: 80px;
-    background-color: #5c5c5ca1;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0px 0px 15px 15px;
 }
-
-/* =======================img-logo============== */
-.heder__logo_img {
-    height: 80px;
-    padding-top: 10px;
+/* =======LOGO========= */
+.header-logo img{
+    height: 60px;
+}
+.header-logo {
+    padding: 10px;
     margin-left: 10px;
+    margin-right: 10px;
 }
-/* ===================================== */
-.heder__menu {
-    margin: 0px 0px 0px 10%;
+/* ==========NAV======= */
+.header-nav {
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
 }
-
-/* ==================== */
-
-.menu {
-    padding: 5px 0;
-    margin-right: 10%;
+.header-nav nav {
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.menu__list {
+.header-nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.menu__item:not(:last-child) {
-    margin: 0 20px 0 0px;
+.header-nav li {
+    padding: 17px;
 }
-/* ==================== */
-.menu__link {
-    color: rgb(255 255 255);
-    font-weight: 600;
-    font-size: 15px;
-    line-height: calc(24 / 14 * 100%);
-    /* Высота макета делится на размер шрифта и умножается на 100% и мы получим высоту строки (высоту шрифта задаем с помощью font-size) */
+.header-nav a {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
 }
-
-/* ======================================== */
-.header_button{
-    margin-top: 25px;
-    padding: 0 20px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: #030054;
+/* =======CONTACT======= */
+.header-contacts div {
+    margin-top: 20px;
+    min-width: 160px;
 }
-.header_button:hover{
-    cursor: pointer;
-    background-color: #050088;
-}
-/* ==================== */
-.button__text{
-    color: aliceblue;
-}
-/* =======================================main=============================================== */
-.main-block {
-    position: relative;
-}
-/* ======================= */
-.main-block__body {
-    position: relative;
-    left: 48%;
-    top: 150px;
-    z-index: 2;
-    max-width: 54%;
-    background-color: #2c2c2cb6;
-    padding: 20px 20px 50px 20px;
+.header-contacts button{
+    background-color: rgb(147 98 84);
+    padding: 12px 18px;
     border-radius: 15px;
 }
-/* ================================================= */
-.main-block__title {
-    font-size: 48px;
-    line-height: calc(80 / 58 * 100%);
-    font-weight: 800;
-    letter-spacing: 0.2px;
-    text-align: center;
-    margin: 0 0 15px 0;
-    color: #fafafa;
+.header-contacts button:hover{
+    background-color: rgb(105, 70, 61);
 }
-/* ====================== */
+.header-contacts a {
+    color: white;
+    font-weight: 600;
+}
+/* ============================Основная часть================================ */
+/* ======background main======== */
+.main {
+    position: relative;
+    height: 600px;
+    min-width: 100%;
+    background-image: url(../img/main/main_bg.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+@media (min-width:1440px) {
+    .main{
+        background-size: contain;
+    }
+}
 
-.main-block__text {
-    color: rgb(255 255 255);
+/* =====Главный офер====== */
+.main-offer_block {
+    position: absolute;
+    width: 530px;
+    top: 130px;
+    left: 50%;
+    padding: 20px 20px 36px 20px ;
+    background-color: #2c2c2cb6;
+    border-radius: 15px;
+}
+@media (max-width:1000px) {
+    .main-offer_block{
+        left: 24%;
+    }
+}
+@media (max-width:770px) {
+    .main-offer_block{
+        width: 100%;
+        left: 0%;
+    }
+}
+/* =========Текст======== */
+.main-offer_block h1 {
+    font-size: 48px;
+    line-height: normal;
+    color: white;
+    text-align: center;
+}
+.main-offer_block p{
+    color: white;
+    text-align: center;
+    margin: 10px;
     font-size: 20px;
     font-weight: 600;
-    line-height: calc(30/20*100%);
 }
-/* ======================= buttons =========================*/
-.main-block__buttons {
-    position: relative;
-    left: 53%;
-    top: 125px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
-    z-index: 4;
-}
-
-.main-block__button {
-    border-radius: 37px;
-    display: flex;
-    min-height: 48px;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 36px;
-    font-weight: 700;
-    line-height: 150%;
-    text-align: center;
-    letter-spacing: 0.2px;
-    margin: 10px 17px;
-}
-
-.main-block__button_orange{
-    color: #FFFFFF;
-    background: #e4612d;
-}
-
-/* ================================================ */
-.main-block_image {
+/* ==========Кнопки======= */
+.main-offer_block-buttons {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0;
+    left: 7%;
+    margin-top: 7px;
 }
 
-.main-block_image img {
-    max-width: 100%;   
+.main-offer_block-buttons button{
+    background-color: rgb(147 98 84);
+    padding: 15px 28px;
+    border-radius: 25px;
 }
-/* ============================================== */
-.page-null{
-    position: relative;
-    min-height: 400px;
+.main-offer_block-buttons button:hover{
+    background-color: rgb(105, 70, 61);
 }
-/* ===========================================services-block====================================== */
-
-.services-block {
-    position: relative;
+/* ========первая кнопка======== */
+.main-offer_block-buttons button:first-child {
+    margin-right: 15px;
 }
-/* ==================== */
-.services-block__title {
-    font-size: 48px;
-    line-height: calc(80 / 58 * 100%);
-    font-weight: 800;
-    letter-spacing: 0.2px;
+@media (max-width:500px) {
+    .main-offer_block-buttons button:first-child{
+        margin-bottom: 15px;
+    }
+}
+/* ========ссылки в кнопках====== */
+.main-offer_block-buttons a {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+/* =========================================================== */
+/* =========Что мы делаем=================== */
+.services h1{
     text-align: center;
-    margin: 0 0 15px 0;
-    color: #000000;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
 }
-/* =================== */
-.services-block__body{
-    /* border: solid 3px rgb(16, 32, 0); */
-    border-radius: 40px;
-    padding: 40px;
+/* =========основной блок========== */
+.services-main_block {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: linear-gradient(rgb(141 137 128), rgb(169 163 161 / 78%), rgb(180 129 98));
+    border-radius: 15px;
     display: flex;
-    flex-direction: row;
-    z-index: 5;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.753), rgba(124, 128, 118, 0.336), rgb(29, 29, 29));
+    margin-bottom: 20px;
 }
-/* ================== */
-.services-block__card{
+@media (max-width:855px) {
+    .services-main_block {
+        display: block;
+    }
+}
+/* =========services-card================ */
+.services-card {
+    margin: 2%;
+    padding: 3% 1% 0 2%;
+    max-width: 29%;
     border: solid 2px rgb(41, 41, 41);
     border-radius: 15px;
-    padding: 30px;
-    min-height: 400px;
-    width: 289px;
-    z-index: 3;
-    position: relative;
+    background-repeat:no-repeat;
+    background-size:cover;
     box-shadow: 10px 5px 5px rgb(71, 71, 71);
-    /* display: flex;
-    flex-wrap: wrap; */
 }
-.services-block__card:not(:last-of-type){
-    margin-right: 30px;
+.services-landing {
+    background-image:linear-gradient(1deg,rgba(0, 0, 0, 0.363),rgba(0, 0, 0, 0.466)), url(../img/services/card1.jpg);
 }
-/* ================== */
-.services-block__card-title{
-    font-size: 20px;
-    font-weight: 600;
+.services-im{
+    background-image:linear-gradient(1deg,rgba(0, 0, 0, 0.363),rgba(0, 0, 0, 0.466)), url(../img/services/card2.jpg);
+}
+.services-korp{
+    background-image:linear-gradient(1deg,rgba(0, 0, 0, 0.363),rgba(0, 0, 0, 0.466)), url(../img/services/card3.jpg);
+}
+@media (max-width:855px){
+    .services-card {
+        max-width: 80%;
+        margin: 0 auto 8%;
+    }
+}
+/* =======текстовый блок======= */
+.services-card h3{
+    color: white;
     text-align: center;
-    height: 45px;
-    width: 100%;
-    margin: 0 0 0px 0;
-    color: #FFFFFF;
-}
-/* ================== */
-.services-block__card-text{
-    font-weight: 600;
-    padding: 3px;
-    border-radius: 5px;
-    height: 225px;
-    color: #000000;
-    font-size: 16px;
-    box-shadow: inset 20em 20em rgba(179, 179, 179, 0.459);
-}
-/* ================== */
-.services-block__card-price{
-    color: #FFFFFF;
-    position: relative;
-    top: 20px;
-    width: 100%;
-    text-align: center;
-}
-/* ================== */
-.services-block__card_img-landing {
-    position: absolute;
-    right: -1px;
-    bottom: -1px;
-    height: 415px;
-    z-index: -1;
-    border-radius: 15px;
-    opacity: 0.9;
-    width: 287px;
-}
-/* ================== */
-.services-block__button {
-    border-radius: 37px;
-    display: flex;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 36px;
     font-weight: 700;
-    line-height: 150%;
+}
+.services-card p{
+    color: white;
+    padding: 3px;
+}
+/* ========блок цены========= */
+.services_price {
+    color: white;
     text-align: center;
-    letter-spacing: 0.2px;
-    margin: 10px 17px;
-    color: #FFFFFF;
-    background: #e4612d;
+    margin-top: 15px;
+}
+.services_button{
+    background-color: rgb(147 98 84);
+    padding: 12px 18px;
+    margin: 0 25px 0 25px;
+    border-radius: 15px;
+    text-align: center;
     position: relative;
     top: 15px;
+    box-shadow: 10px 15px 5px rgb(17, 17, 17);
 }
-/* ====================================etaps-block==================== */
-.etaps-block_image {
-    position: relative;
-    height: 100%;
-    top: 0px;
-    z-index: 0;
+.services_button:hover{
+    background-color: rgb(105, 70, 61);
 }
-.etaps-block_image img {
-    width: 100%;
-    opacity: 0.8;
-}
-/* =================== */
-.etaps-block__title{
-    font-size: 48px;
-    line-height: calc(80 / 58 * 100%);
-    font-weight: 800;
-    letter-spacing: 0.2px;
-    text-align: center;
-    margin: 0 0 15px 0;
-    color: #1d1c1c;
-    position: relative;
-    top: 120px;
-    z-index: 3;
-}
-/* =================== */
-.etaps-block__container {
-    position: relative;
-}
-/* ==================== */
-.etaps-block__body {
-    position: absolute;
-    z-index: 5;
-    top: 100px;
-}
-/* ==================== */
-.etaps-block__card-title{
-    font-size: 25px;
-}
-.etaps-block__card-text {
-
-}
-/* =================== */
-.etaps-block__card {
-    width: 30%;
-    margin: 1.5%;
-    padding: 20px;
-    border: 5px solid snow;
-    background-color: #ffffffe0;
-}
-.etaps-block__card_2 {
-    position: relative;
-    left: 33%;
-}
-.etaps-block__card_3 {
-    position: relative;
-    left: 66%;
-}
-/* ===========================page__idea===================================== */
-.page__idea-block {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 20px;
-    /* width: 100%; */
-    border: 4px solid #424242;
-    border-radius: 60px;
-    position: relative;
-    height: 110px;
-}
-.idea-block__container{
-    display: flex;
-}
-/* ===================== */
-.idea-block__title{
-    font-size: 40px;
+.services_button a {
+    color: white;
     font-weight: 600;
-    color: #030054;
 }
-/* ===================== */
-.idea-block__text {
-    margin-top: 10px;
+/* ============================Етапы========================================= */
+.etaps {
+    background-image: url(../img/etaps/bg_etaps.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-bottom: 2%;
+    margin-top: 3%;
+}
+
+.etaps h1 {
+    padding: 10px 0 20px 0;
+    text-align: center;
+    font-weight: 800;
+    font-size: 46px;
+}
+@media (max-width:1345px) {
+    .etaps {
+        background-image:linear-gradient(1deg,rgba(0, 0, 0, 0.363),rgba(0, 0, 0, 0.466)), url(../img/etaps/bg_etaps.jpg);
+    }
+    .etaps h1 {
+        color: white;
+    }
+}
+
+.etaps_main-block {
+    position: relative;
     width: 100%;
+    height: 100%;
 }
-/* ===================== */
-.idea-block__href{
-    border-radius: 37px;
+
+.etaps-card {
+    background-color: rgba(179, 199, 211, 0.623);
+    border: 3px solid silver;
+    max-width: 29%;
+    margin: 1%;
+    padding: 0.8% 1.5%;
+}
+.etaps-card2{
+    position: relative;
+    left: 34%;
+}
+.etaps-card3{
+    position: relative;
+    left: 68%;
+}
+@media (max-width:555px) {
+    .etaps-card {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .etaps-card2, .etaps-card3{
+        left: 0%;
+        margin-top: 2%;
+    }
+}
+/* ==============================idea================================== */
+.idea {
+    border: 3px solid #8c4738;
+    border-radius: 30px;
+    padding: 10px 10px 10px;
+    margin: 30px 0;
+}
+
+.idea_container {
+    position: relative;
     display: flex;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 36px;
-    font-weight: 700;
-    line-height: 150%;
+}
+/* ========text=========== */
+.idea_text {
+    margin-right: auto;
+}
+.idea_text h1 {
+    font-size: 40px;
+    color: #1a1632;
+}
+.idea_text p{
+    font-size: 16px;
+    color: #1a1632;
+    padding: 5px 0;
+}
+/* =========btn========== */
+.idea_button a {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: rgb(147 98 84);
+    padding: 20px 40px;
+    border-radius: 40px;
     text-align: center;
-    letter-spacing: 0.2px;
-    /* margin: 0px 0px; */
-    color: #FFFFFF;
-    background: #e4612d;
-    position: absolute;
-    left: 65%;
-    top: 25%;
 }
-/* =====================================footer=========================== */
-.footer {
-    min-height: 400px;
+.idea_button {
+    height: 100%;
+    top: 50px;
+    position:relative;
+}
+@media (max-width:700px) {
+    .idea_button a {
+        padding: 10px 20px;
+        font-weight: 500;
+    }
+    .idea_text p {
+        font-size: 14px;
+    }
+    .idea_text h1 {
+        font-size: 30px;
+        line-height: normal;
+    }
+    .idea_text {
+        max-width: 50%;
+    }
+}
+@media (max-width:460px){
+    .idea {
+        padding: 0px;
+        margin-top: 10px;
+    }
+    .idea_container {
+        display: block;
+    }
+    .idea_button {
+        left: 30%;
+        top: 50%;
+        transform: translate(-0%, 70%);
+    }
+    .idea_text {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width:380px){
+    .idea_button {
+        left: 25%;
+    }
+}
+@media (max-width:322px){
+    .idea_button {
+        left: 20%;
+    }
+}
+/* ================================footer=================================== */
+footer {
     display: flex;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.473), rgb(242 212 185), rgb(198 124 94));
+    background-image: linear-gradient(#dfdfdf, rgb(242 212 185), rgb(198 124 94));
 }
-/* ================== */
-.footer-card-left, .footer-card-right {
+
+/* ===================footer-form=========== */
+.footer-form{
     width: 50%;
-    height: 300px;
-    max-width: 50%;
-    padding: 40px;
+    padding: 20px 70px 20px;
 }
-/* ================== */
-.footer-card-left h1, .footer-card-right h1 {
-    font-size: 24px;
-    font-weight: 500;
+.footer-form h1 {
     text-align: center;
-    margin-bottom: 25px;
-}
-/* ================== */
-.footer-input_name_phone {
-    display: flex;
-    flex-wrap: nowrap;
     margin-bottom: 10px;
 }
-.footer-input_name_phone input {
-    width: 47%;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 4px solid bisque;
-    color: rgb(19, 15, 11);
+/* ======================== */
+.footer-form form {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
 }
-
-.footer-input_name {
-    margin-right: 6%;
+.footer-form form *:not(:last-child) {
+    font-size: 18px;
+    padding: 3px 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(199 180 194);
+    color: rgb(0, 0, 0);
 }
-
+/* ======================= */
+.footer-input_name{
+    width: 49%;
+    margin: 0 2% 5px 0;
+}
+.footer-input_phone{
+    width: 49%;
+    margin-bottom: 5px;
+}
 .footer-input_email{
     width: 100%;
-    font-size: 15px;
-    padding: 8px;
-    border-radius: 8px;
-    border: 4px solid bisque;
-    color: rgb(19, 15, 11);
-    margin-bottom: 13px;
+    margin-bottom: 5px;
 }
-
 .footer-textarea {
     width: 100%;
-    font-size: 15px;
-    padding: 8px;
-    border-radius: 8px;
-    border: 4px solid bisque;
-    color: rgb(19, 15, 11);
+    margin-bottom: 15px;
 }
-
-.footer-button {
-    border-radius: 20px;
-    /* display: flex; */
-    min-height: 40px;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 30px;
-    font-weight: 600;
-    line-height: 150%;
+/* ===================== */
+.footer-button{
+    background-color: rgb(147 98 84);
+    padding: 12px 18px;
+    border: 2px solid #8c4738;
+    border-radius: 15px;
     text-align: center;
-    margin-top: 10px;
-    background-color: #f3d5bb;
-    color: #000000;
 }
-
-.footer-button:hover {
-    cursor: pointer;
-    background-color: #FFFFFF;
+.footer-button a {
+    padding: 12px 18px;
+    color: #eeede7;
+    font-size: 16px;
+    font-weight: 600;
 }
-
-.footer_my-telefon, .footer_my-email {
-    /* height: 30px; */
-    line-height: 30px;
-    vertical-align:middle;
-    text-align:center;
-    margin-left: 10px;
+@media (max-width:1345px) {
+    footer{
+        background-image: linear-gradient(#dfdfdf, rgb(242 212 185), rgb(123 64 40));
+    }
+    .footer-button{
+        background-color: rgb(189, 68, 34);
+    }
 }
-
-.footer-telefon-div, .footer-email-div {
-    /* justify-content: center; */
-    display: flex;
-    height: 30px;
+/* =============footer_contacts================= */
+.footer_contacts{
+    width: 50%;
+    padding: 20px 50px 50px;
 }
-
-.footer-card-right {
+.footer_contacts h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* ================== */
+.footer_contacts img {
+    max-height: 50px;
+}
+.footer_contacts-card div{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     position: relative;
 }
-
-.footer_messegers {
+.footer_contacts-card span {
+    font-size: 19px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin-left: 15px;
+    font-weight: 600;
+}
+/* ================contacts_sticky================ */
+.contacts_sticky {
     position: fixed;
-    left: 90%;
-    top: 90%;
-    z-index: 50;
+    top: 98%;
+    left: 98%;
+    transform: translate(-100%, -100%);
 }
 
-.footer_messegers img {
-    max-height: 50px;
+@media (max-width:770px) {
+    footer {
+        flex-wrap: wrap;
+    }
+    .footer-form{
+        width: 100%;
+    }
+    .footer_contacts{
+        width: 100%;
+    }
+}
+
+@media (max-width:460px){
+    .footer-input_name{
+        width: 100%;
+        margin: 0 0 5px 0;
+    }
+    .footer-input_phone{
+        width: 100%;
+        margin: 0 0 5px 0;
+    }
+    .footer-form{
+        padding: 20px 20px 20px;
+    }
+    .footer_contacts{
+        padding: 20px 20px 20px;
+    }
 }
