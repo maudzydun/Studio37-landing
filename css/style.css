@@ -102,11 +102,82 @@ header{
 }
 .header-contacts button:hover{
     background-color: rgb(105, 70, 61);
+    cursor: pointer;
 }
 .header-contacts a {
     color: white;
     font-weight: 600;
 }
+
+/* ============hiden-contact-form =========================================== */
+.hiden-contact-form{
+    position: absolute;
+    z-index: 49;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-image: linear-gradient(#535151de, rgb(82, 69, 63), rgba(53, 41, 37, 0.979));
+}
+
+.hiden-contact-form_main-block {
+    border-radius: 15px;
+    padding: 15px;
+    background-image: linear-gradient(#797979, rgb(110, 98, 93), rgb(77, 43, 31));
+    border-radius: 15px;
+    width: 50%;
+    margin-top: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-0%, 20%);
+    box-shadow: 20px 25px 25px rgb(29, 15, 10);
+}
+@media (max-width:500px) {
+    .hiden-contact-form_main-block {
+        width: 80%;
+    }
+}
+
+.hiden-contact-form_main-block h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hiden-contact-form_main-block form {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+}
+
+.hiden-contact-form_main-block form *:not(:last-child) {
+    font-size: 18px;
+    padding: 3px 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(199 180 194);
+    color: rgb(0, 0, 0);
+}
+
+.hiden-contact-form_main-block form .X {
+    position: absolute;
+    color: rgb(49, 42, 42);
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0 8px 4px;
+    right: -16px;
+    top: -19px;
+    border: 1px solid rgb(49, 42, 42) ;
+    line-height: normal;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+.hide-contact-btn {
+    cursor: pointer;
+}
+
+/* ================================= */
 /* ============================Основная часть================================ */
 /* ======background main======== */
 .main {
@@ -455,6 +526,8 @@ footer {
 .footer-textarea {
     width: 100%;
     margin-bottom: 15px;
+    resize: none;
+    min-height: 130px;
 }
 /* ===================== */
 .footer-button{
@@ -511,6 +584,7 @@ footer {
     top: 98%;
     left: 98%;
     transform: translate(-100%, -100%);
+    z-index: 50;
 }
 
 @media (max-width:770px) {

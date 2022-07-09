@@ -34,13 +34,28 @@
             </div>
             <div class="header-contacts">
                 <div>
-                    <button>
-                        <a href="">Зв'язатися з нами</a>
+                    <button class="hide-contact-btn">
+                        <a>Зв'язатися з нами</a>
                     </button>
                 </div>
             </div>
         </div>
     </header>
+    <div class="hiden-contact-form">
+        <div class="hiden-contact-form_main-block _container">
+            <h1>Напишіть нам!</h1>
+            <form action="">
+                <input class="footer-input_name" type="text" name="your-name" placeholder="Ім'я:">
+                <input class="footer-input_phone" type="text" name="your-phone" placeholder="Телефон:">
+                <input class="footer-input_email" type="email" name="your-email" placeholder="Email:">
+                <textarea class="footer-textarea" name="your-message" cols="40" rows="6" placeholder="Введіть повідомлення:"></textarea>
+                <span class="X hide-contact-btn">x</span>
+                <button class="footer-button">
+                    <a href="">Відіслати листа</a>
+                </button>
+            </form>
+        </div>
+    </div>
     <div class="main">
         <div class="main-offer_block">
             <div>
@@ -54,8 +69,8 @@
                 </div>
             </div>
             <div class="main-offer_block-buttons">
-                <button>
-                    <a href="">Обговорити ідею</a>
+                <button class="hide-contact-btn">
+                    <a>Обговорити ідею</a>
                 </button>
                 <button>
                     <a href="">Замовити зараз</a>
@@ -139,8 +154,8 @@
                 <h1>Маєте ідею?</h1>
                 <p>Зв'яжіться з нами і ми знайдемо як її реалізувати</p>
             </div>
-            <button class="idea_button">
-                <a href="">Залишити заявку</a>
+            <button class="idea_button hide-contact-btn">
+                <a>Залишити заявку</a>
             </button>
         </div>
     </div>
@@ -179,5 +194,10 @@
             </div>
         </div>
     </footer>
+<!-- ================================== -->
+    <!-- Подключаем JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Подключаем наш JavaScript -->
+    <script src="js/skript.js"></script>
 </body>
 </html>
