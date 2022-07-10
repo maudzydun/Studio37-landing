@@ -18,16 +18,16 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="">Головна</a>
+                            <a href="#main">Головна</a>
                         </li>
                         <li>
-                            <a href="">Наші послуги</a>
+                            <a href="#services">Наші послуги</a>
                         </li>
                         <li>
-                            <a href="">Етапи роботи</a>
+                            <a href="#etaps">Етапи роботи</a>
                         </li>
                         <li>
-                            <a href="">Зв'язок</a>
+                            <a href="#contacts">Зв'язок</a>
                         </li>
                     </ul>
                 </nav>
@@ -56,7 +56,7 @@
             </form>
         </div>
     </div>
-    <div class="main">
+    <div id='main' class="main">
         <div class="main-offer_block">
             <div>
                 <div>
@@ -72,17 +72,25 @@
                 <button class="hide-contact-btn">
                     <a>Обговорити ідею</a>
                 </button>
-                <button>
-                    <a href="">Замовити зараз</a>
+                <button class="btn-for-services">
+                    <a href="#services">Замовити зараз</a>
                 </button>
             </div>
         </div>
         
     </div>
-    <div class="services">
+    <div id="services" class="services">
         <div class="_container">
             <div>
                 <h1>ЩО МИ РОБИМО</h1>
+            </div>
+            <div class="hiden-services">
+                <span>
+                    <h2>Вже знаєш що хочеш?</h2>
+                    <p>Тоді обирай який сайт тобі потрібен</p>
+                </span>
+                <span class="abo">АБО</span>
+                <button class="hide-contact-btn">Зв'яжіться зі мною</button>
             </div>
             <div class="services-main_block">
                 <div class="services-card services-landing">
@@ -96,8 +104,8 @@
                     <div class="services_price">
                         Ціна від <b>4000 грн</b>
                     </div>
-                    <div class="services_button">
-                        <a href="">Думаю цей</a>
+                    <div id="lending-button" class="services_button">
+                        <a>Думаю цей</a>
                     </div>
                 </div>
                 <div class="services-card services-im">
@@ -108,10 +116,10 @@
                         </p>
                     </div>
                     <div class="services_price">
-                        Ціна від <b>4000 грн</b>
+                        Ціна від <b>8000 грн</b>
                     </div>
-                    <div class="services_button">
-                        <a href="">Думаю цей</a>
+                    <div id="internet-shop-button" class="services_button">
+                        <a>Думаю цей</a>
                     </div>
                 </div>
                 <div class="services-card services-korp">
@@ -122,29 +130,29 @@
                         </p>
                     </div>
                     <div class="services_price">
-                        Ціна від <b>4000 грн</b>
+                        Ціна від <b>5500 грн</b>
                     </div>
-                    <div class="services_button">
-                        <a href="">Думаю цей</a>
+                    <div id="korporation-button" class="services_button">
+                        <a>Думаю цей</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="etaps">
+    <div id="etaps" class="etaps">
         <h1>Етапи роботи</h1>
         <div class="etaps_main-block">
             <div class="etaps-card etaps-card1">
                 <h3>Обговорення проекту</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A dicta facilis voluptatem tempore aut numquam nisi iure, hic impedit commodi sequi et in! Dolor, libero voluptatibus! Eum dignissimos delectus earum.</p>
+                <p>Ви розповідаєте що у Вас за бізнес, які є послуги або товари, яким ви бачете майбутній сайт. На цьому етапі нам максимально необхідно визначити Ваші бажжання і очікування що до майбутнього інструменту</p>
             </div>
             <div class="etaps-card etaps-card2">
                 <h3>Аналіз цільової аудиторії і конкурентів</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A dicta facilis voluptatem tempore aut numquam nisi iure, hic impedit commodi sequi et in! Dolor, libero voluptatibus! Eum dignissimos delectus earum.</p>
+                <p>Далі ми проводимо аналіз: визначаємо вік, стать, інтереси і бажання потенційних відвідувачів вашого сайту. А також проводимо аналіз конкуренції, щоб краще розуміти як <b>наші</b> клєнти будуть швидше нас знаходити</p>
             </div>
             <div class="etaps-card etaps-card3">
                 <h3>Створення сайту</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A dicta facilis voluptatem tempore aut numquam nisi iure, hic impedit commodi sequi et in! Dolor, libero voluptatibus! Eum dignissimos delectus earum.</p>
+                <p>На цьому етапі ми узгоджуємо макет функціоналу і дизайн. Починаємо роботу і показуємо покроково резульатат. Вносимо необхідні правки, а також робимо все щоб перевершити Ваші сподівання базуючись на великому досвіді в створенні сайтів</p>
             </div>
         </div>
     </div>
@@ -159,7 +167,7 @@
             </button>
         </div>
     </div>
-    <footer>
+    <footer id="contacts">
         <div class="footer-form">
             <h1>Напишіть нам!</h1>
             <form action="">

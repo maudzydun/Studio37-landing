@@ -41,6 +41,10 @@ body {
     box-sizing: content-box;
     /* Если ширина 100% то весь контент помещается внутрь, таким образом идет выравниване по контенту */
 }
+
+button{
+    cursor: pointer;
+}
 /* ==================Шапка================ */
 /* ============HEADER======= */
 header{
@@ -51,7 +55,7 @@ header{
     z-index: 50;
 }
 .header{
-    background-color: #5c5c5ca1;
+    background-color: #4e4d4b;
     display: flex;
     flex-direction: row;
     border-radius: 0px 0px 15px 15px;
@@ -61,7 +65,7 @@ header{
     height: 60px;
 }
 .header-logo {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -86,9 +90,10 @@ header{
     padding: 17px;
 }
 .header-nav a {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 500;
     color: white;
+    letter-spacing: 1px;
 }
 /* =======CONTACT======= */
 .header-contacts div {
@@ -96,7 +101,7 @@ header{
     min-width: 160px;
 }
 .header-contacts button{
-    background-color: rgb(147 98 84);
+    background-color: rgb(147, 98, 84);
     padding: 12px 18px;
     border-radius: 15px;
 }
@@ -116,13 +121,14 @@ header{
     width: 100%;
     height: 100%;
     display: none;
-    background-image: linear-gradient(#535151de, rgb(82, 69, 63), rgba(53, 41, 37, 0.979));
+    background-image: url(../img/hiden_contact/background.jpg);
+    background-size: cover;
 }
 
 .hiden-contact-form_main-block {
     border-radius: 15px;
     padding: 15px;
-    background-image: linear-gradient(#797979, rgb(110, 98, 93), rgb(77, 43, 31));
+    background-image: linear-gradient(#dbd7d6, rgb(60 54 52), rgb(72 72 72));
     border-radius: 15px;
     width: 50%;
     margin-top: 50px;
@@ -153,7 +159,7 @@ header{
     padding: 3px 7px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: rgb(199 180 194);
+    background-color: rgb(230, 219, 227);
     color: rgb(0, 0, 0);
 }
 
@@ -175,6 +181,14 @@ header{
 
 .hide-contact-btn {
     cursor: pointer;
+}
+
+.hiden-contact-form_main-block form button {
+    border: 1px solid black;
+    background-color: rgb(131, 87, 74);
+}
+.hiden-contact-form_main-block form button:hover {
+    background-color: rgb(85, 56, 49);
 }
 
 /* ================================= */
@@ -241,6 +255,7 @@ header{
     background-color: rgb(147 98 84);
     padding: 15px 28px;
     border-radius: 25px;
+    cursor: pointer;
 }
 .main-offer_block-buttons button:hover{
     background-color: rgb(105, 70, 61);
@@ -269,6 +284,53 @@ header{
     font-weight: 800;
     margin-top: 10px;
 }
+/* ============ Прихований блок ==================== */
+.hiden-services {
+    margin-top: 10px;
+    padding: 10px 0px;
+    background-color: rgba(141, 137, 128, 0.74);
+    border-radius: 15px 15px 0 0 ;
+    color: #000000;
+    display: none;
+}
+
+.hiden-services p {
+    font-weight: 500;
+}
+
+.abo {
+    position: relative;
+    top: 15px;
+}
+
+.hiden-services *{
+    margin: 0 auto;
+}
+
+.hiden-services button{
+    background-color: rgb(147 98 84);
+    padding: 10px 18px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(17, 17, 17);
+    font-weight: 700;
+    color: #eeede7;
+    font-size: 17px;
+    max-height: 40px;
+    position: relative;
+    top: 10px;
+}
+.hiden-services button:hover{
+    background-color: rgb(105, 70, 61);
+}
+@media (max-width:527px) {
+    .hiden-services button {
+        max-height: 60px;
+        margin-left: 5px;
+        padding: 0px 9px;
+        top: 0px;
+    }
+}
+
 /* =========основной блок========== */
 .services-main_block {
     padding-left: 20px;
@@ -334,6 +396,7 @@ header{
     position: relative;
     top: 15px;
     box-shadow: 10px 15px 5px rgb(17, 17, 17);
+    cursor: pointer;
 }
 .services_button:hover{
     background-color: rgb(105, 70, 61);
@@ -533,7 +596,7 @@ footer {
 .footer-button{
     background-color: rgb(147 98 84);
     padding: 12px 18px;
-    border: 2px solid #8c4738;
+    border: 1px solid black;
     border-radius: 15px;
     text-align: center;
 }
